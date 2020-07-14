@@ -1,0 +1,308 @@
+/*#############################################################
+Name: The Hobbit
+Date: 2006-10-11
+Description: Submission for OWD template contest "Favourite Book".
+Author: Viktor Persson
+URL: http://templates.arcsin.se
+
+Feel free to use and modify but please provide credits.
+#############################################################*/
+
+/* standard elements */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {color: #36C;}
+
+a:hover {color: #06F;}
+
+body {
+	background: #4E5D3C url(../img/bg.jpg);
+	color: #444;
+	font: normal 62.5% "Lucida Sans Unicode",sans-serif;
+	margin: 0;
+}
+
+p,blockquote,ul {margin-bottom: 1.2em;}
+
+h1 {font: normal 1.6em serif;}
+
+h2 {
+	font: bold 1em Verdana,serif;
+	margin: 3px 0 1px;
+}
+
+ul {margin-left: 1.8em;}
+
+blockquote {
+	background: url(../img/quote.gif) no-repeat;
+	color: #555;
+	font: normal 1.4em serif;
+	padding-left: 22px;
+}
+
+blockquote p {padding: 6px;}
+
+/* misc */
+.clearer {clear: both;}
+
+.left {float: left;}
+
+.right {float: right;}
+
+img.left {margin: 0 18px 6px 0;}
+
+.divider {
+	background: url(../img/divider.gif) no-repeat;
+	height: 20px;
+	margin: 24px 0;
+}
+
+/* structure */
+.container {
+	background: url(../img/bgcontainer.jpg) repeat-y center top;
+	margin: 0 auto;
+	width: 736px;
+}
+
+.gfx {
+	background: url(../img/gfx.jpg) no-repeat;
+	float: left;
+	height: 140px;
+	margin-top: 12px;
+	width: 52px;
+}
+
+.top {
+	background: url(../img/bgcontent.gif) no-repeat 0 -4%;
+	float: left;
+	text-align: center;
+	width: 632px;
+}
+
+.header {
+	background: #56644A url(../img/header.jpg) no-repeat;
+	color: #FFC;
+	font-size: 1.4em;
+	height: 232px;
+	padding-right: 270px;
+}
+
+.header h1 {
+	font: normal 3.2em serif,sans-serif;
+	padding: 62px 0 34px 0;
+}
+
+.pattern {
+	background: #334127 url(../img/pattern.gif) repeat-x;
+	clear: both;
+	height: 12px;
+}
+
+/* navigation */
+.navigation {margin: 0 24px;}
+
+.navigation a {
+	color: #6C7151;
+	font: normal 1.9em serif;
+	line-height: 50px;
+	margin: 0 16px;
+	text-decoration: none;
+}
+.navigation a:hover,.navigation #selected {
+	color: #2C3111;
+}
+
+/* content */
+.content {
+	background: url(../img/bgcontent.gif) no-repeat;
+	clear: both;
+	font-size: 1.2em;
+	margin: 0 52px;
+	padding: 0 38px 12px;
+}
+.content .spacer {
+	height: 42px;
+}
+
+/* content item */
+.item {clear: both;}
+
+.item img {border: 1px dashed #8A6;}
+
+.item .title {
+	color: #445044;
+	font: normal 2em serif;
+}
+
+.item .title:first-letter {
+	display: block;
+	float: left;
+	font-size: 2.4em;
+}
+
+.item .metadata {
+	color: #666;
+	font-size: 0.9em;
+	float: left;
+	padding: 0 0 6px 4px;
+}
+
+.item .body {
+	clear: both;
+}
+
+/* footer */
+.footer {
+	background: url(../img/bgfooter.gif) no-repeat;
+	color: #666;
+	font-size: 1.1em;
+	line-height: 41px;
+	margin: 0 auto;
+	text-align: center;
+	width: 632px;
+}
+
+.footer a {
+	color: #666;
+	text-decoration: none;
+}
+
+.footer a:hover {
+	color: #333;
+	text-decoration: underline;
+}
+
+
+/*--------------------------*/
+.style2 {font-size: 9}
+#Layer1 {
+	position:absolute;
+	left:1015px;
+	top:95px;
+	width:311px;
+	height:411px;
+	z-index:1;
+	visibility: visible;
+}
+#Layer1 
+{
+
+}
+#Layer2 {
+	position:absolute;
+	left:19px;
+	top:51px;
+	width:243px;
+	height:196px;
+	z-index:2;
+}
+#Layer3 {
+	position:absolute;
+	left:52px;
+	top:177px;
+	width:158px;
+	height:317px;
+	z-index:2;
+	border: 3px solid #FFFFCC;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(../img/auth.jpg);
+	padding: 30px;
+	boder-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	box-shadow: 4px 4px 6px black;
+}
+#Layer3 input{
+ width:100%;
+ margin-bottom:10px;
+}
+#Layer3 input[name="login"], input[name="password"]{
+height:30px;
+background-color:#FFFFFF;
+border:1px solid #FFBD2F;
+padding-left:5px;
+boder-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+#Layer3 input[name="Submit"]{
+height:30px;
+background-color:#336633;
+color:#FFFFFF;
+boder-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+#Layer3 input[name="Submit"]:hover{
+border:1px solid #FF0000;
+color:#000000;
+}
+#Layer5 {
+	position:absolute;
+	left:60px;
+	top:184px;
+	width:209px;
+	height:54px;
+	z-index:3;
+	background-color: #F0FFF0;
+	boder-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+
+}
+.style4 {color: #2F4E59;}
+.style6 {color: #000000; font-size: 2.5em; }
+
+.style8 {
+	font-size: large;
+	font-family: "Times New Roman", Times, serif;
+	color: #FFFFFF;
+
+}
+.style11 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: large;
+	color: #FFFFFF;
+	font-weight: bold;
+
+}
+.style12 {color: #FFFFCC}
+.input{boder-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;}
+.style13 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: large;
+}
+.style14 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: larger;
+}
+#Layer4 {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:48px;
+	height:605px;
+	z-index:4;
+}
+#Layer6 {
+	position:absolute;
+	left:50px;
+	top:612px;
+	width:237px;
+	height:132px;
+	z-index:4;
+}
+#Layer7 {
+	position:absolute;
+	left:1166px;
+	top:402px;
+	width:130px;
+	height:115px;
+	z-index:4;
+}
