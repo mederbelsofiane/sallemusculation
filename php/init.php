@@ -1,8 +1,9 @@
-<?php include "session-secretaire.class.php"?>
+<?php include "classes/session-sadmin.class.php"?>
+<?php include "includes.php"?>
 <?php
 
   $database = db_connect();
   DatabaseObject::set_database($database);
 
-  $session_secretaire = new SessionSecretaire;
+  $session_SAdmin= new SessionSAdmin;
    ?>

@@ -1,0 +1,46 @@
+body
+{
+  background-color:  #BDC3C7 ;
+  margin: 40px;
+}
+
+#form-background{
+  background-color: white;
+}
+.form
+{
+  margin: 50px;
+}
+
+.login-form
+{
+  margin-top: 80px;
+
+
+  border:2px solid #5D6D7E ;
+   box-shadow: 0px 4px 10px 6px #5D6D7E ;
+  border-radius: 5px;
+  align-self: center;
+}
+/* medecinLogin */
+#medecin-background{
+  background-image: url(../../images/form.jpg);
+  background-color: #000;
+  background-size: cover;
+  opacity: 0.95;
+
+}
+#secretaire-background{
+  background-image: url(../../images/form.jpg);
+  background-color: #000;
+  background-size: cover;
+  opacity: 0.95;
+
+}
+#patient-background{
+  background-image: url(../../images/form.jpg);
+  background-color: #000;
+  background-size: cover;
+  opacity: 0.95;
+
+}

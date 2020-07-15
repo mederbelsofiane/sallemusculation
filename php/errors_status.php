@@ -17,9 +17,9 @@ function display_errors($errors=array()) {
 }
 function require_login()
 {
-global $session_secretaire;
-if(!$session_secretaire->is_logged_in()) {
-  redirect_to('../secretaireLogin.php');
+global $session_SAdmin;
+if(!$session_SAdmin->is_logged_in()) {
+  redirect_to('loginsa.php');
 } else {
   // Do nothing, let the rest of the page proceed
 }

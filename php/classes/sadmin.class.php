@@ -3,40 +3,40 @@
 
 class SAdmin extends DatabaseObject {
 
-  static protected $table_name = "admin";
-  static protected $db_columns = ['id', 'nom',
+  static protected $table_name = "super_admin";
+  static protected $db_columns = ['id_s', 'nom',
    'prenom',  'date_n', 'tel', 'email', 'username',
-    'password', 'qst_s', 'photo'];
+    'hashed_password', 'qst_s', 'photo'];
 
-  public $id_secretaire;
-  public $prenom_secretaire;
-  public $nom_secretaire;
-  public $username;
-  public $date_de_naissance;
-  public $sexe;
-  public $telephone;
-  public $image;
+  public $id_s;
+  public $nom;
+  public $prenom;
+  public $date_n;
+  public $tel;
   public $email;
+  public $username;
   protected $hashed_password;
+  public $qst_s;
+  public $photo;
   public $password;
   public $confirm_password;
   protected $password_required = true;
 
   public function __construct($args=[]) {
-    $this->prenom_secretaire = $args['prenom_secretaire'] ?? '';
-    $this->nom_secretaire = $args['nom_secretaire'] ?? '';
-    $this->username = $args['username'] ?? '';
-    $this->date_de_naissance = $args['date_de_naissance'] ?? '';
-    $this->sexe = $args['sexe'] ?? '';
-    $this->telephone = $args['telephone'] ?? '';
-    $this->image = $args['image'] ?? '';
+    $this->nom = $args['nom'] ?? '';
+    $this->prenom = $args['prenom'] ?? '';
+    $this->date_n = $args['date_n'] ?? '';
+    $this->tel = $args['tel'] ?? '';
     $this->email = $args['email'] ?? '';
+    $this->username = $args['username'] ?? '';
+    $this->qst_s = $args['qst_s'] ?? '';
+    $this->photo = $args['photo'] ?? '';
     $this->password = $args['password'] ?? '';
     $this->confirm_password = $args['confirm_password'] ?? '';
   }
 
   public function full_name() {
-    return $this->prenom_secretaire . " " . $this->nom_secretaire;
+    return $this->prenom . " " . $this->nom;
   }
 
   protected function set_hashed_password() {
@@ -59,7 +59,7 @@ class SAdmin extends DatabaseObject {
     $sql .= "')";
     $result = self::$database->query($sql);
     if($result) {
-      $this->id_secretaire = self::$database->insert_id;
+      $this->id_s = self::$database->insert_id;
     }
     return $result;
   }
@@ -85,7 +85,7 @@ class SAdmin extends DatabaseObject {
 
         $sql = "UPDATE " . static::$table_name . " SET ";
         $sql .= join(', ', $attribute_pairs);
-        $sql .= " WHERE " .static::$db_columns['0']. " = '"  . self::$database->escape_string($this->id_secretaire) . "' ";
+        $sql .= " WHERE " .static::$db_columns['0']. " = '"  . self::$database->escape_string($this->id_s) . "' ";
         $sql .= "LIMIT 1";
         $result = self::$database->query($sql);
         return $result;
@@ -93,7 +93,7 @@ class SAdmin extends DatabaseObject {
   }
   public function delete() {
     $sql = "DELETE FROM " . static::$table_name . " ";
-    $sql .= "WHERE  " .static::$db_columns['0']. " = '" . self::$database->escape_string($this->id_secretaire) . "' ";
+    $sql .= "WHERE  " .static::$db_columns['0']. " = '" . self::$database->escape_string($this->id_s) . "' ";
     $sql .= "LIMIT 1";
     $result = self::$database->query($sql);
     return $result;
@@ -102,15 +102,15 @@ class SAdmin extends DatabaseObject {
   public function validate() {
     $this->errors = [];
 
-    if(is_blank($this->prenom_secretaire)) {
+    if(is_blank($this->prenom)) {
       $this->errors[] = "le prenom est obligatoire, ne peut pas etre vide.";
-    } elseif (!has_length($this->prenom_secretaire, array('min' => 2, 'max' => 255))) {
+    } elseif (!has_length($this->prenom, array('min' => 2, 'max' => 255))) {
       $this->errors[] = "prenom doit contenir de 2 à 255 characters.";
     }
 
-    if(is_blank($this->nom_secretaire)) {
+    if(is_blank($this->nom)) {
       $this->errors[] = "le nom est obligatoire, ne peut pas etre vide.";
-    } elseif (!has_length($this->nom_secretaire, array('min' => 2, 'max' => 255))) {
+    } elseif (!has_length($this->nom, array('min' => 2, 'max' => 255))) {
       $this->errors[] = "nom doit contenir de 2 à 255 characters.";
     }
 
@@ -126,7 +126,7 @@ class SAdmin extends DatabaseObject {
       $this->errors[] = "Username ne peut pas etre vide.";
     } elseif (!has_length($this->username, array('min' => 8, 'max' => 255))) {
       $this->errors[] = "Username doit avoir de 8 à 255 characters.";
-    } elseif (!has_unique_username($this->username, $this->id_secretaire ?? 0)) {
+    } elseif (!has_unique_username($this->username, $this->id_s ?? 0)) {
       $this->errors[] = "Username existe deja . veuiller le changer.";
     }
 

@@ -26,14 +26,14 @@ body {
 /* navbar */
 .topbar{
 
-  background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(../img/z.jpg);
+  background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(../../img/z.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .sidebar {
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9)), url(../img/z.jpg);
+  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9)), url(../../img/z.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

@@ -71,8 +71,8 @@
         <!-- end of sidebar -->
 
         <!-- top-nav -->
-        <div class="col-xl-10 col-lg-9 col-md-8 ml-auto bg-dark fixed-top top-navbar">
-          <div class="topbar row align-items-center">
+        <div class="col-xl-10 col-lg-9 col-md-8 ml-auto  fixed-top top-navbar">
+          <div class=" row align-items-center">
 
               <!-- <div class="col-md-3 my-2">
                 <form>
@@ -95,8 +95,8 @@
                 ?>
                 <li class="nav-item ml-md-auto m-2 border border-danger rounded ">
 
-                  <a href="../AdminLogout.php"
-                    class="nav-link text-light font-weight-bold p-2">Se  Déconnecter
+                  <a href="SAdminLogout.php"
+                    class="nav-link text-light bg-dark font-weight-bold p-2">Se  Déconnecter
                   <i class="fas fa-sign-out-alt text-danger ml-2 fa-lg float-right">
 
                   </i></a></li>
