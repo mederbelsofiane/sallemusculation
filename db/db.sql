@@ -1,30 +1,32 @@
 CREATE TABLE `admin` (
 	`id` int NOT NULL AUTO_INCREMENT,
-	`nom` char ,
-	`prenom` char ,
+	`nom` varchar(100) ,
+	`prenom` varchar(100) ,
+	`sexe` varchar(100) ,
 	`date_n` DATE ,
-	`tel` char ,
-	`email` char(100)  UNIQUE,
-	`username` char(30)  UNIQUE,
-	`password` char(30) ,
-	`qst_s` char ,
-	`photo` char ,
+	`tel` varchar(100) ,
+	`email` varchar(100)  UNIQUE,
+	`username` varchar(100)  UNIQUE,
+	`password` varchar(100) ,
+	`qst_s` varchar(100) ,
+	`photo` varchar(100) ,
 	PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `membre` (
 	`id_abo` int,
 	`id_membre` int NOT NULL AUTO_INCREMENT,
-	`nom` char(100),
-	`prenom` char(100),
+	`nom` varchar(100),
+	`prenom` varchar(100),
+	`sexe` varchar(100),	
 	`date_n` DATE ,
-	`email` char  UNIQUE,
-	`username` char  UNIQUE,
-	`password` char ,
-	`adress` char ,
-	`tel` char ,
+	`email` varchar(100)  UNIQUE,
+	`username` varchar(100)  UNIQUE,
+	`password` varchar(100) ,
+	`adress` varchar(100) ,
+	`tel` varchar(100) ,
 	`date_rejoint` DATE ,
-	`photo` char ,
+	`photo` varchar(100) ,
 	PRIMARY KEY (`id_membre`)
 );
 
@@ -39,11 +41,11 @@ CREATE TABLE `abonnenement` (
 
 CREATE TABLE `product` (
 	`id_produit` int NOT NULL AUTO_INCREMENT,
-	`nom` char ,
+	`nom` varchar(100) ,
 	`qnt` int ,
 	`prix` FLOAT ,
 	`prix_g` FLOAT ,
-	`image` char ,
+	`image` varchar(100) ,
 	PRIMARY KEY (`id_produit`)
 );
 
@@ -60,34 +62,34 @@ CREATE TABLE `panier` (
 );
 
 CREATE TABLE `finance` (
-	`pdf_fin` char
+	`pdf_fin` varchar(100)
 );
 
 CREATE TABLE `depense` (
 	`id_depense` int NOT NULL AUTO_INCREMENT,
-	`date_depense` DATE  AUTO_INCREMENT,
+	`date_depense` DATE ,
 	`id_produit` int ,
 	PRIMARY KEY (`id_depense`)
 );
 
 CREATE TABLE `plan` (
 	`id_plan` int NOT NULL AUTO_INCREMENT,
-	`type` char ,
+	`type` varchar(100) ,
 	`tarif` FLOAT ,
 	PRIMARY KEY (`id_plan`)
 );
 
 CREATE TABLE `super_admin` (
 	`id_s` int NOT NULL AUTO_INCREMENT,
-	`nom` char ,
-	`prenom` char ,
+	`nom` varchar(100) ,
+	`prenom` varchar(100) ,
 	`date_n` DATE ,
-	`tel` char ,
-	`email` char(100)  UNIQUE,
-	`username` char(30)  UNIQUE,
-	`password` char(30) ,
-	`qst_s` char ,
-	`photo` char ,
+	`tel` varchar(100) ,
+	`email` varchar(100)  UNIQUE,
+	`username` varchar(100) UNIQUE,
+	`password` varchar(100) ,
+	`qst_s` varchar(100) ,
+	`photo` varchar(100) ,
 	PRIMARY KEY (`id_s`)
 );
 
